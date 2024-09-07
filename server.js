@@ -6,15 +6,15 @@ puppeteer.use(StealthPlugin());
 const schedule = require('node-schedule');
 const nodemailer = require('nodemailer');
 const app = express();
-const port = 3000;
+const port = 3000 || process.env.PORT;
 
 app.use(express.json());
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'tsmark0085@gmail.com',
-        pass: 'jpwr xqtv xwtj oorc'
+        user: 'example@gmail.com',
+        pass: '*** *** *** ***'
     }
 });
 
